@@ -1,0 +1,14 @@
+#
+# Make file for Examples
+#
+
+all: chars
+
+chars: chars.c
+	gcc -o chars chars.c -std=c11 -Wall -Wpedantic -Wextra
+
+debug: chars.c
+	gcc -o chars chars.c -g -std=c11 -Wall -Wpedantic -Wextra
+
+clean:
+	rm chars
